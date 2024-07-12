@@ -287,6 +287,11 @@ header img {
     font-size: 1.2rem;
 }
 
+.nav-link.active {
+    color: #007bff !important;
+    font-weight: bold;
+}
+
 
 @media (max-width: 1200px) {
  

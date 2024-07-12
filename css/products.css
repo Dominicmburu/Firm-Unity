@@ -4,41 +4,14 @@ body {
     margin-top: 56px;
 }
 
-.navbar-brand .brand-name {
-    margin-left: 10px;
-    font-size: 1.5rem;
-    color: #000; 
-}
-
-.navbar {
-    background-color: #f8df00;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 3;
-}
-
-.navbar .nav-link {
-    color: rgb(0, 0, 0) !important;
-}
-
-.navbar .nav-link.active {
-    font-weight: bold;
-}
-
-.navbar a:hover {
-    color: #0004ff;
-}
-
-.navbar .btn {
-    background-color: #007bff;
-}
-
 .product-section {
     background-color: #696502;
     color: white;
     padding-top: 56px; /* Adjust for fixed navbar height */
+}
+
+.product-section .pimage{
+    border-radius: 12px;
 }
 
 .products-services h1 {
