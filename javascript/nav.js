@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const navLinks = document.querySelectorAll('.nav-link');
 
     navLinks.forEach(link => {
-        if (link.href === currentLocation || (link.id === 'nav-home')) {
+        if (link.href === currentLocation || (link.href.includes("index.html") && currentLocation.endsWith('/'))) {
             link.classList.add('active');
         } else {
             link.classList.remove('active');
