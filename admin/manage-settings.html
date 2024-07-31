@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/icon.ico" type="image/x-icon">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <title>Manage Settings</title>
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <div class="bg-dark border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading text-white">Admin Panel</div>
+            <div class="list-group list-group-flush">
+                <a href="verify-users.html" class="list-group-item list-group-item-action bg-dark text-white">Verify Users</a>
+                <a href="view-members.html" class="list-group-item list-group-item-action bg-dark text-white">View Members</a>
+                <a href="manage-settings.html" class="list-group-item list-group-item-action bg-dark text-white active">Manage Settings</a>
+            </div>
+        </div>
+        
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <button class="btn btn-primary" id="menu-toggle">☰</button>
+            </nav>
+            
+            <div class="container-fluid">
+                <h3 class="mt-4">Manage Settings</h3>
+                
+                <!-- Profile Section -->
+                <div class="profile-section mt-4">
+                    <h4>Your Profile</h4>
+                    <form>
+                        <div class="form-group">
+                            <label for="profile-name">Name</label>
+                            <input type="text" class="form-control" id="profile-name" name="profile-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-email">Email</label>
+                            <input type="email" class="form-control" id="profile-email" name="profile-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-password">Password</label>
+                            <input type="password" class="form-control" id="profile-password" name="profile-password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-repeat-password">Repeat Password</label>
+                            <input type="password" class="form-control" id="profile-repeat-password" name="profile-repeat-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-dark">Save Changes</button>
+                    </form>
+                </div>
+                
+                <!-- Add Admin Button -->
+                <button class="btn btn-primary mt-4" onclick="toggleAddAdminForm()">Create a New Admin</button>
+                
+                <!-- Add Admin Section -->
+                <div id="add-admin-form" class="add-admin-section mt-4 d-none">
+                    <h4>Add Admin</h4>
+                    <form>
+                        <div class="form-group">
+                            <label for="admin-name">Name</label>
+                            <input type="text" class="form-control" id="admin-name" name="admin-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="admin-email">Email</label>
+                            <input type="email" class="form-control" id="admin-email" name="admin-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="admin-password">Password</label>
+                            <input type="password" class="form-control" id="admin-password" name="admin-password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="admin-repeat-password">Repeat Password</label>
+                            <input type="password" class="form-control" id="admin-repeat-password" name="admin-repeat-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-dark">Add Admin</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function toggleSidebar() {
+            document.getElementById('wrapper').classList.toggle('toggled');
+        }
+
+        function toggleAddAdminForm() {
+            document.getElementById('add-admin-form').classList.toggle('d-none');
+        }
+
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            toggleSidebar();
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
